@@ -1,0 +1,1 @@
+{"name":"mechanical-engineering-hub","version":"1.0.0","description":"Comprehensive mechanical engineering resource","main":"index.html","scripts":{"start":"npx http-server -p 8080 -o"},"license":"MIT"}

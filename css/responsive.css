@@ -1,0 +1,479 @@
+/* Responsive Design Enhancements */
+
+/* Extra Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .calculator-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .formula-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Screens (1200px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .calculator-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .formula-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium Screens (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .calculator-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .formula-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .manufacturing-grid,
+    .maintenance-types,
+    .learning-paths {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .calculator-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formula-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .manufacturing-grid,
+    .maintenance-types,
+    .learning-paths,
+    .courses-grid,
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .standards-organizations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .checklist-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (480px - 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--bg-white);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        overflow-y: auto;
+    }
+
+    .nav-menu li {
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-access-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calculator-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formula-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .manufacturing-grid,
+    .maintenance-types,
+    .learning-paths,
+    .courses-grid,
+    .books-grid,
+    .standards-organizations,
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .checklist-container {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+/* Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+    .nav-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav-brand .tagline {
+        font-size: 0.65rem;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-access-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-tabs {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        width: 100%;
+    }
+
+    .formula-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .manufacturing-grid,
+    .maintenance-types,
+    .learning-paths,
+    .courses-grid,
+    .books-grid,
+    .standards-organizations,
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .checklist-container {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        max-height: 90vh;
+    }
+
+    .converter-inputs {
+        flex-direction: column;
+    }
+
+    .converter-arrow {
+        transform: rotate(90deg);
+        align-self: center;
+    }
+
+    .materials-search {
+        flex-direction: column;
+    }
+
+    .search-input,
+    .filter-select {
+        width: 100%;
+    }
+
+    .calculator-actions {
+        flex-direction: column;
+    }
+
+    .btn-calculate,
+    .btn-reset {
+        width: 100%;
+    }
+
+    .shape-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .material-selector {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+    .section {
+        padding: 30px 15px;
+    }
+
+    .hero-features {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .formula,
+    .result-value,
+    .calculator-result .formula {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hero,
+    .quick-access,
+    .footer {
+        display: none;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    .calculator-card,
+    .formula-item,
+    .manufacturing-card,
+    .maintenance-type,
+    .course-card,
+    .book-card {
+        break-inside: avoid;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    .section h2 {
+        font-size: 18pt;
+    }
+
+    .formula {
+        font-size: 11pt;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark Mode Support (Automatic) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f1f5f9;
+        --text-light: #94a3b8;
+        --bg-light: #1e293b;
+        --bg-white: #0f172a;
+        --border-color: #334155;
+    }
+
+    .navbar {
+        background: var(--bg-white);
+    }
+
+    .hero {
+        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    .btn-primary {
+        background: var(--bg-white);
+        color: var(--primary-color);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        border-color: white;
+    }
+
+    .calculator-card,
+    .formula-category,
+    .manufacturing-card,
+    .maintenance-type,
+    .metric-card,
+    .learning-path,
+    .course-card,
+    .book-card,
+    .standards-org,
+    .application-card,
+    .checklist-section {
+        background: var(--bg-white);
+    }
+
+    .formula,
+    .result-value,
+    .calculator-result .formula {
+        color: #e2e8f0;
+    }
+
+    .materials-table tbody tr:nth-child(even),
+    .materials-table tbody tr:hover {
+        background: var(--bg-light);
+    }
+
+    .comparison-table tbody tr:nth-child(even) {
+        background: var(--bg-light);
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .tab-btn,
+    .calc-tab,
+    .calculator-card,
+    .quick-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+
+    input[type="range"] {
+        height: 12px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        width: 24px;
+        height: 24px;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+    }
+}

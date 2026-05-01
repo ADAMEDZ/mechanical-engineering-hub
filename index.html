@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Engineering Hub - Complete Engineering Resource</title>
+    <meta name="description" content="Comprehensive mechanical engineering resource with calculators, formulas, learning materials, and industry best practices.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calculators.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Mechanical Engineering Hub</h1>
+                <span class="tagline">Complete Engineering Resource</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#calculators" class="nav-link">Calculators</a></li>
+                <li><a href="#formulas" class="nav-link">Formulas</a></li>
+                <li><a href="#materials" class="nav-link">Materials</a></li>
+                <li><a href="#manufacturing" class="nav-link">Manufacturing</a></li>
+                <li><a href="#maintenance" class="nav-link">Maintenance</a></li>
+                <li><a href="#learning" class="nav-link">Learning</a></li>
+                <li><a href="#standards" class="nav-link">Standards</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Complete Mechanical Engineering Resource</h1>
+            <p>Your comprehensive hub for engineering calculations, formulas, materials data, manufacturing processes, maintenance best practices, and learning resources.</p>
+            <div class="hero-buttons">
+                <a href="#calculators" class="btn btn-primary">Explore Calculators</a>
+                <a href="#learning" class="btn btn-secondary">Start Learning</a>
+            </div>
+        </div>
+        <div class="hero-features">
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>50+ Calculators</h3>
+                <p>Engineering calculations for every need</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>200+ Formulas</h3>
+                <p>Essential engineering formulas</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Best Courses</h3>
+                <p>Curated learning resources</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏭</div>
+                <h3>Industry Standards</h3>
+                <p>ASME, ASTM, ISO guidelines</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Section -->
+    <section class="quick-access">
+        <div class="container">
+            <h2>Quick Access</h2>
+            <div class="quick-access-grid">
+                <a href="#calculators" class="quick-link">
+                    <span class="quick-icon">🧮</span>
+                    <span>Calculators</span>
+                </a>
+                <a href="#formulas" class="quick-link">
+                    <span class="quick-icon">📐</span>
+                    <span>Formulas</span>
+                </a>
+                <a href="#materials" class="quick-link">
+                    <span class="quick-icon">🔩</span>
+                    <span>Materials</span>
+                </a>
+                <a href="#unit-converter" class="quick-link">
+                    <span class="quick-icon">🔄</span>
+                    <span>Unit Converter</span>
+                </a>
+                <a href="#manufacturing" class="quick-link">
+                    <span class="quick-icon">⚙️</span>
+                    <span>Manufacturing</span>
+                </a>
+                <a href="#maintenance" class="quick-link">
+                    <span class="quick-icon">🔧</span>
+                    <span>Maintenance</span>
+                </a>
+                <a href="#learning" class="quick-link">
+                    <span class="quick-icon">🎓</span>
+                    <span>Learning</span>
+                </a>
+                <a href="#standards" class="quick-link">
+                    <span class="quick-icon">📋</span>
+                    <span>Standards</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculators Section -->
+    <section id="calculators" class="section">
+        <div class="container">
+            <h2>Engineering Calculators</h2>
+            <p class="section-description">Comprehensive calculators for mechanical engineering applications</p>
+
+            <div class="calculator-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-tab="mechanics">Mechanics</button>
+                    <button class="tab-btn" data-tab="thermodynamics">Thermodynamics</button>
+                    <button class="tab-btn" data-tab="fluid">Fluid Mechanics</button>
+                    <button class="tab-btn" data-tab="materials">Materials</button>
+                    <button class="tab-btn" data-tab="machine">Machine Design</button>
+                </div>
+
+                <div class="calculator-grid" id="calculatorGrid">
+                    <!-- Mechanics Calculators -->
+                    <div class="calculator-card" data-category="mechanics">
+                        <h3>Stress & Strain Calculator</h3>
+                        <p>Calculate stress, strain, and deformation</p>
+                        <button class="btn btn-calc" onclick="openCalculator('stress-strain')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="mechanics">
+                        <h3>Beam Analysis</h3>
+                        <p>Calculate beam deflection and reactions</p>
+                        <button class="btn btn-calc" onclick="openCalculator('beam')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="mechanics">
+                        <h3>Moment of Inertia</h3>
+                        <p>Calculate moment of inertia for various shapes</p>
+                        <button class="btn btn-calc" onclick="openCalculator('moment-inertia')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="mechanics">
+                        <h3>Shaft Design</h3>
+                        <p>Design shafts for torsion and bending</p>
+                        <button class="btn btn-calc" onclick="openCalculator('shaft')">Open Calculator</button>
+                    </div>
+
+                    <!-- Thermodynamics Calculators -->
+                    <div class="calculator-card" data-category="thermodynamics">
+                        <h3>Heat Transfer</h3>
+                        <p>Calculate heat transfer rates</p>
+                        <button class="btn btn-calc" onclick="openCalculator('heat-transfer')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="thermodynamics">
+                        <h3>Thermal Expansion</h3>
+                        <p>Calculate thermal expansion and stress</p>
+                        <button class="btn btn-calc" onclick="openCalculator('thermal-expansion')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="thermodynamics">
+                        <h3>Ideal Gas Law</h3>
+                        <p>Calculate gas properties using ideal gas law</p>
+                        <button class="btn btn-calc" onclick="openCalculator('ideal-gas')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="thermodynamics">
+                        <h3>Entropy Calculator</h3>
+                        <p>Calculate entropy changes</p>
+                        <button class="btn btn-calc" onclick="openCalculator('entropy')">Open Calculator</button>
+                    </div>
+
+                    <!-- Fluid Mechanics Calculators -->
+                    <div class="calculator-card" data-category="fluid">
+                        <h3>Bernoulli Equation</h3>
+                        <p>Calculate fluid flow using Bernoulli's principle</p>
+                        <button class="btn btn-calc" onclick="openCalculator('bernoulli')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="fluid">
+                        <h3>Reynolds Number</h3>
+                        <p>Determine flow regime (laminar/turbulent)</p>
+                        <button class="btn btn-calc" onclick="openCalculator('reynolds')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="fluid">
+                        <h3>Pipe Flow</h3>
+                        <p>Calculate pressure drop in pipes</p>
+                        <button class="btn btn-calc" onclick="openCalculator('pipe-flow')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="fluid">
+                        <h3>Pump Selection</h3>
+                        <p>Select and size pumps for applications</p>
+                        <button class="btn btn-calc" onclick="openCalculator('pump')">Open Calculator</button>
+                    </div>
+
+                    <!-- Materials Calculators -->
+                    <div class="calculator-card" data-category="materials">
+                        <h3>Material Selection</h3>
+                        <p>Compare and select materials</p>
+                        <button class="btn btn-calc" onclick="openCalculator('material-selection')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="materials">
+                        <h3>Fatigue Life</h3>
+                        <p>Estimate fatigue life of components</p>
+                        <button class="btn btn-calc" onclick="openCalculator('fatigue')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="materials">
+                        <h3>Creep Calculator</h3>
+                        <p>Calculate creep deformation</p>
+                        <button class="btn btn-calc" onclick="openCalculator('creep')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="materials">
+                        <h3>Fracture Mechanics</h3>
+                        <p>Analyze crack propagation</p>
+                        <button class="btn btn-calc" onclick="openCalculator('fracture')">Open Calculator</button>
+                    </div>
+
+                    <!-- Machine Design Calculators -->
+                    <div class="calculator-card" data-category="machine">
+                        <h3>Gear Design</h3>
+                        <p>Design spur and helical gears</p>
+                        <button class="btn btn-calc" onclick="openCalculator('gear')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="machine">
+                        <h3>Bearing Selection</h3>
+                        <p>Select bearings for applications</p>
+                        <button class="btn btn-calc" onclick="openCalculator('bearing')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="machine">
+                        <h3>Bolted Joints</h3>
+                        <p>Design bolted connections</p>
+                        <button class="btn btn-calc" onclick="openCalculator('bolted')">Open Calculator</button>
+                    </div>
+
+                    <div class="calculator-card" data-category="machine">
+                        <h3>Spring Design</h3>
+                        <p>Design compression and extension springs</p>
+                        <button class="btn btn-calc" onclick="openCalculator('spring')">Open Calculator</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unit Converter Section -->
+    <section id="unit-converter" class="section alt-bg">
+        <div class="container">
+            <h2>Unit Converter</h2>
+            <p class="section-description">Convert between different engineering units</p>
+
+            <div class="converter-container">
+                <div class="converter-type-selector">
+                    <select id="converterType" class="converter-select">
+                        <option value="length">Length</option>
+                        <option value="mass">Mass</option>
+                        <option value="force">Force</option>
+                        <option value="pressure">Pressure</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="energy">Energy</option>
+                        <option value="power">Power</option>
+                        <option value="velocity">Velocity</option>
+                        <option value="area">Area</option>
+                        <option value="volume">Volume</option>
+                    </select>
+                </div>
+
+                <div class="converter-inputs">
+                    <div class="converter-input-group">
+                        <label>From:</label>
+                        <input type="number" id="fromValue" class="converter-input" placeholder="Enter value">
+                        <select id="fromUnit" class="converter-select"></select>
+                    </div>
+                    <div class="converter-arrow">→</div>
+                    <div class="converter-input-group">
+                        <label>To:</label>
+                        <input type="number" id="toValue" class="converter-input" readonly>
+                        <select id="toUnit" class="converter-select"></select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="convertUnits()">Convert</button>
+                <div class="converter-result" id="converterResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulas Section -->
+    <section id="formulas" class="section">
+        <div class="container">
+            <h2>Engineering Formulas</h2>
+            <p class="section-description">Essential formulas for mechanical engineering</p>
+
+            <div class="formula-categories">
+                <div class="formula-category">
+                    <h3>Mechanics</h3>
+                    <div class="formula-list">
+                        <div class="formula-item">
+                            <h4>Stress</h4>
+                            <div class="formula">σ = F/A</div>
+                            <p>Where: σ = stress, F = force, A = cross-sectional area</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Strain</h4>
+                            <div class="formula">ε = ΔL/L₀</div>
+                            <p>Where: ε = strain, ΔL = deformation, L₀ = original length</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Hooke's Law</h4>
+                            <div class="formula">σ = E·ε</div>
+                            <p>Where: E = Young's modulus</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Shear Stress</h4>
+                            <div class="formula">τ = F/A</div>
+                            <p>Where: τ = shear stress, F = shear force, A = area</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Bending Stress</h4>
+                            <div class="formula">σ = M·y/I</div>
+                            <p>Where: M = bending moment, y = distance from neutral axis, I = moment of inertia</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Torsional Stress</h4>
+                            <div class="formula">τ = T·r/J</div>
+                            <p>Where: T = torque, r = radius, J = polar moment of inertia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-category">
+                    <h3>Dynamics</h3>
+                    <div class="formula-list">
+                        <div class="formula-item">
+                            <h4>Newton's Second Law</h4>
+                            <div class="formula">F = m·a</div>
+                            <p>Where: F = force, m = mass, a = acceleration</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Kinetic Energy</h4>
+                            <div class="formula">KE = ½·m·v²</div>
+                            <p>Where: KE = kinetic energy, m = mass, v = velocity</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Potential Energy</h4>
+                            <div class="formula">PE = m·g·h</div>
+                            <p>Where: PE = potential energy, g = gravity, h = height</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Momentum</h4>
+                            <div class="formula">p = m·v</div>
+                            <p>Where: p = momentum, m = mass, v = velocity</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Angular Momentum</h4>
+                            <div class="formula">L = I·ω</div>
+                            <p>Where: L = angular momentum, I = moment of inertia, ω = angular velocity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-category">
+                    <h3>Thermodynamics</h3>
+                    <div class="formula-list">
+                        <div class="formula-item">
+                            <h4>First Law of Thermodynamics</h4>
+                            <div class="formula">ΔU = Q - W</div>
+                            <p>Where: ΔU = change in internal energy, Q = heat added, W = work done</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Ideal Gas Law</h4>
+                            <div class="formula">PV = nRT</div>
+                            <p>Where: P = pressure, V = volume, n = moles, R = gas constant, T = temperature</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Heat Transfer (Conduction)</h4>
+                            <div class="formula">Q = -k·A·(dT/dx)</div>
+                            <p>Where: Q = heat transfer rate, k = thermal conductivity, A = area</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Heat Transfer (Convection)</h4>
+                            <div class="formula">Q = h·A·(Tₛ - T∞)</div>
+                            <p>Where: h = heat transfer coefficient, Tₛ = surface temperature, T∞ = fluid temperature</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Carnot Efficiency</h4>
+                            <div class="formula">η = 1 - (T_c/T_h)</div>
+                            <p>Where: η = efficiency, T_c = cold reservoir temp, T_h = hot reservoir temp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-category">
+                    <h3>Fluid Mechanics</h3>
+                    <div class="formula-list">
+                        <div class="formula-item">
+                            <h4>Bernoulli's Equation</h4>
+                            <div class="formula">P₁/ρg + v₁²/2g + z₁ = P₂/ρg + v₂²/2g + z₂</div>
+                            <p>Where: P = pressure, ρ = density, v = velocity, z = elevation</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Reynolds Number</h4>
+                            <div class="formula">Re = ρ·v·D/μ</div>
+                            <p>Where: ρ = density, v = velocity, D = diameter, μ = dynamic viscosity</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Continuity Equation</h4>
+                            <div class="formula">A₁·v₁ = A₂·v₂</div>
+                            <p>Where: A = cross-sectional area, v = velocity</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Darcy-Weisbach Equation</h4>
+                            <div class="formula">h_f = f·(L/D)·(v²/2g)</div>
+                            <p>Where: h_f = head loss, f = friction factor, L = length, D = diameter</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-category">
+                    <h3>Machine Design</h3>
+                    <div class="formula-list">
+                        <div class="formula-item">
+                            <h4>Safety Factor</h4>
+                            <div class="formula">SF = σ_yield/σ_working</div>
+                            <p>Where: SF = safety factor, σ_yield = yield strength, σ_working = working stress</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Endurance Limit</h4>
+                            <div class="formula">σ_e = 0.5·σ_uts</div>
+                            <p>Where: σ_e = endurance limit, σ_uts = ultimate tensile strength (for steel)</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Gerber Line (Fatigue)</h4>
+                            <div class="formula">(σ_m/σ_uts)² + (σ_a/σ_e) = 1</div>
+                            <p>Where: σ_m = mean stress, σ_a = alternating stress</p>
+                        </div>
+                        <div class="formula-item">
+                            <h4>Contact Stress (Hertz)</h4>
+                            <div class="formula">σ_c = √[(F·E)/(π·L·R)]</div>
+                            <p>Where: F = force, E = modulus, L = length, R = radius</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materials" class="section alt-bg">
+        <div class="container">
+            <h2>Materials Database</h2>
+            <p class="section-description">Comprehensive material properties and selection guide</p>
+
+            <div class="materials-search">
+                <input type="text" id="materialSearch" class="search-input" placeholder="Search materials...">
+                <select id="materialCategory" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="steel">Steel</option>
+                    <option value="aluminum">Aluminum</option>
+                    <option value="titanium">Titanium</option>
+                    <option value="copper">Copper</option>
+                    <option value="plastics">Plastics</option>
+                    <option value="composites">Composites</option>
+                </select>
+            </div>
+
+            <div class="materials-table-container">
+                <table class="materials-table">
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Density (kg/m³)</th>
+                            <th>Yield Strength (MPa)</th>
+                            <th>Ultimate Strength (MPa)</th>
+                            <th>Young's Modulus (GPa)</th>
+                            <th>Thermal Conductivity (W/m·K)</th>
+                            <th>Applications</th>
+                        </tr>
+                    </thead>
+                    <tbody id="materialsTableBody">
+                        <!-- Materials will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing Section -->
+    <section id="manufacturing" class="section">
+        <div class="container">
+            <h2>Manufacturing Processes</h2>
+            <p class="section-description">Comprehensive guide to manufacturing processes and best practices</p>
+
+            <div class="manufacturing-grid">
+                <div class="manufacturing-card">
+                    <h3>Machining</h3>
+                    <ul>
+                        <li>Turning</li>
+                        <li>Milling</li>
+                        <li>Drilling</li>
+                        <li>Grinding</li>
+                        <li>Boring</li>
+                    </ul>
+                    <p>Removal of material to achieve desired shape and dimensions</p>
+                </div>
+
+                <div class="manufacturing-card">
+                    <h3>Forming</h3>
+                    <ul>
+                        <li>Forging</li>
+                        <li>Extrusion</li>
+                        <li>Rolling</li>
+                        <li>Stamping</li>
+                        <li>Deep Drawing</li>
+                    </ul>
+                    <p>Plastic deformation of materials to create shapes</p>
+                </div>
+
+                <div class="manufacturing-card">
+                    <h3>Casting</h3>
+                    <ul>
+                        <li>Sand Casting</li>
+                        <li>Die Casting</li>
+                        <li>Investment Casting</li>
+                        <li>Permanent Mold</li>
+                        <li>Centrifugal Casting</li>
+                    </ul>
+                    <p>Pouring molten metal into molds to create parts</p>
+                </div>
+
+                <div class="manufacturing-card">
+                    <h3>Joining</h3>
+                    <ul>
+                        <li>Welding (MIG, TIG, Stick)</li>
+                        <li>Brazing</li>
+                        <li>Soldering</li>
+                        <li>Adhesive Bonding</li>
+                        <li>Mechanical Fastening</li>
+                    </ul>
+                    <p>Joining components to create assemblies</p>
+                </div>
+
+                <div class="manufacturing-card">
+                    <h3>Additive Manufacturing</h3>
+                    <ul>
+                        <li>FDM (Fused Deposition Modeling)</li>
+                        <li>SLA (Stereolithography)</li>
+                        <li>SLS (Selective Laser Sintering)</li>
+                        <li>DMLS (Direct Metal Laser Sintering)</li>
+                        <li>EBM (Electron Beam Melting)</li>
+                    </ul>
+                    <p>Layer-by-layer material addition to create parts</p>
+                </div>
+
+                <div class="manufacturing-card">
+                    <h3>Sheet Metal</h3>
+                    <ul>
+                        <li>Shearing</li>
+                        <li>Punching</li>
+                        <li>Bending</li>
+                        <li>Deep Drawing</li>
+                        <li>Spinning</li>
+                    </ul>
+                    <p>Forming thin metal sheets into components</p>
+                </div>
+            </div>
+
+            <div class="manufacturing-details">
+                <h3>Process Selection Guidelines</h3>
+                <div class="process-selection">
+                    <div class="selection-criteria">
+                        <h4>Selection Criteria</h4>
+                        <ul>
+                            <li><strong>Production Volume:</strong> High volume favors casting, stamping, injection molding</li>
+                            <li><strong>Part Complexity:</strong> Complex geometries favor additive manufacturing, investment casting</li>
+                            <li><strong>Material:</strong> Material properties dictate suitable processes</li>
+                            <li><strong>Tolerance Requirements:</strong> Precision machining for tight tolerances</li>
+                            <li><strong>Surface Finish:</strong> Grinding, polishing for fine finishes</li>
+                            <li><strong>Cost:</strong> Balance tooling costs vs. per-part costs</li>
+                        </ul>
+                    </div>
+                    <div class="process-comparison">
+                        <h4>Process Comparison</h4>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Process</th>
+                                    <th>Tolerance</th>
+                                    <th>Surface Finish</th>
+                                    <th>Production Rate</th>
+                                    <th>Tooling Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Machining</td>
+                                    <td>±0.001mm</td>
+                                    <td>0.2-0.8 μm</td>
+                                    <td>Low-Medium</td>
+                                    <td>Low</td>
+                                </tr>
+                                <tr>
+                                    <td>Die Casting</td>
+                                    <td>±0.05mm</td>
+                                    <td>0.8-1.6 μm</td>
+                                    <td>High</td>
+                                    <td>High</td>
+                                </tr>
+                                <tr>
+                                    <td>Injection Molding</td>
+                                    <td>±0.01mm</td>
+                                    <td>0.2-1.6 μm</td>
+                                    <td>Very High</td>
+                                    <td>Very High</td>
+                                </tr>
+                                <tr>
+                                    <td>3D Printing</td>
+                                    <td>±0.1mm</td>
+                                    <td>1.6-6.3 μm</td>
+                                    <td>Low</td>
+                                    <td>Low</td>
+                                </tr>
+                                <tr>
+                                    <td>Sand Casting</td>
+                                    <td>±0.5mm</td>
+                                    <td>3.2-12.5 μm</td>
+                                    <td>Medium</td>
+                                    <td>Low</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section id="maintenance" class="section alt-bg">
+        <div class="container">
+            <h2>Maintenance & Reliability</h2>
+            <p class="section-description">Best practices for equipment maintenance and reliability engineering</p>
+
+            <div class="maintenance-types">
+                <div class="maintenance-type">
+                    <h3>Preventive Maintenance</h3>
+                    <p>Scheduled maintenance performed to prevent failures</p>
+                    <ul>
+                        <li>Regular inspections</li>
+                        <li>Scheduled replacements</li>
+                        <li>Calibration and testing</li>
+                        <li>Cleaning and lubrication</li>
+                    </ul>
+                    <div class="maintenance-benefits">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Reduced unplanned downtime</li>
+                            <li>Extended equipment life</li>
+                            <li>Improved safety</li>
+                            <li>Better planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="maintenance-type">
+                    <h3>Predictive Maintenance</h3>
+                    <p>Condition-based maintenance using monitoring and analysis</p>
+                    <ul>
+                        <li>Vibration analysis</li>
+                        <li>Thermography</li>
+                        <li>Oil analysis</li>
+                        <li>Ultrasonic testing</li>
+                    </ul>
+                    <div class="maintenance-benefits">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Optimized maintenance intervals</li>
+                            <li>Reduced maintenance costs</li>
+                            <li>Early failure detection</li>
+                            <li>Data-driven decisions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="maintenance-type">
+                    <h3>Reliability Centered Maintenance (RCM)</h3>
+                    <p>Systematic approach to determine maintenance requirements</p>
+                    <ul>
+                        <li>Failure mode analysis</li>
+                        <li>Criticality assessment</li>
+                        <li>Task selection</li>
+                        <li>Interval optimization</li>
+                    </ul>
+                    <div class="maintenance-benefits">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Focused maintenance efforts</li>
+                            <li>Improved reliability</li>
+                            <li>Cost optimization</li>
+                            <li>Risk-based approach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reliability-metrics">
+                <h3>Key Reliability Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>MTBF (Mean Time Between Failures)</h4>
+                        <div class="formula">MTBF = Total Operating Time / Number of Failures</div>
+                        <p>Measures reliability of repairable systems</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>MTTR (Mean Time To Repair)</h4>
+                        <div class="formula">MTTR = Total Repair Time / Number of Repairs</div>
+                        <p>Measures maintainability</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Availability</h4>
+                        <div class="formula">Availability = MTBF / (MTBF + MTTR)</div>
+                        <p>Percentage of time system is operational</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Reliability</h4>
+                        <div class="formula">R(t) = e^(-λt)</div>
+                        <p>Probability of survival to time t (λ = failure rate)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maintenance-checklists">
+                <h3>Maintenance Checklists</h3>
+                <div class="checklist-container">
+                    <div class="checklist-section">
+                        <h4>Daily Maintenance</h4>
+                        <ul>
+                            <li>Check fluid levels (oil, coolant, hydraulic)</li>
+                            <li>Inspect for leaks</li>
+                            <li>Check unusual noises or vibrations</li>
+                            <li>Verify safety devices are functional</li>
+                            <li>Clean work area and equipment</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-section">
+                        <h4>Weekly Maintenance</h4>
+                        <ul>
+                            <li>Lubricate moving parts</li>
+                            <li>Check belt tension and condition</li>
+                            <li>Inspect electrical connections</li>
+                            <li>Test safety interlocks</li>
+                            <li>Review maintenance logs</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-section">
+                        <h4>Monthly Maintenance</h4>
+                        <ul>
+                            <li>Change filters</li>
+                            <li>Calibrate instruments</li>
+                            <li>Inspect wear components</li>
+                            <li>Check alignment</li>
+                            <li>Update maintenance records</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section id="learning" class="section">
+        <div class="container">
+            <h2>Learning Resources</h2>
+            <p class="section-description">Best courses, books, and learning paths for mechanical engineering</p>
+
+            <div class="learning-paths">
+                <div class="learning-path">
+                    <h3>Beginner Path</h3>
+                    <div class="path-steps">
+                        <div class="path-step">
+                            <h4>Step 1: Fundamentals</h4>
+                            <ul>
+                                <li>Engineering Mathematics</li>
+                                <li>Physics (Mechanics)</li>
+                                <li>Chemistry Basics</li>
+                                <li>Technical Drawing</li>
+                            </ul>
+                        </div>
+                        <div class="path-step">
+                            <h4>Step 2: Core Mechanics</h4>
+                            <ul>
+                                <li>Statics</li>
+                                <li>Dynamics</li>
+                                <li>Strength of Materials</li>
+                                <li>Fluid Mechanics</li>
+                            </ul>
+                        </div>
+                        <div class="path-step">
+                            <h4>Step 3: Introduction to Design</h4>
+                            <ul>
+                                <li>Machine Design Basics</li>
+                                <li>CAD Fundamentals</li>
+                                <li>Materials Selection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="learning-path">
+                    <h3>Intermediate Path</h3>
+                    <div class="path-steps">
+                        <div class="path-step">
+                            <h4>Step 1: Advanced Mechanics</h4>
+                            <ul>
+                                <li>Advanced Strength of Materials</li>
+                                <li>Vibration Analysis</li>
+                                <li>Control Systems</li>
+                                <li>Finite Element Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="path-step">
+                            <h4>Step 2: Thermal Systems</h4>
+                            <ul>
+                                <li>Thermodynamics</li>
+                                <li>Heat Transfer</li>
+                                <li>Fluid Dynamics</li>
+                                <li>HVAC Systems</li>
+                            </ul>
+                        </div>
+                        <div class="path-step">
+                            <h4>Step 3: Manufacturing</h4>
+                            <ul>
+                                <li>Manufacturing Processes</li>
+                                <li>Production Planning</li>
+                                <li>Quality Control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="learning-path">
+                    <h3>Advanced Path</h3>
+                    <div class="path-steps">
+                        <div class="path-step">
+                            <h4>Step 1: Specialization</h4>
+                            <ul>
+                                <li>Robotics and Mechatronics</li>
+                                <li>Automotive Engineering</li>
+                                <li>Aerospace Engineering</li>
+                                <li>Energy Systems</li>
+                            </ul>
+                        </div>
+                        <div class="path-step">
+                            <h4>Step 2: Advanced Analysis</h4>
+                            <ul>
+                                <li>Computational Fluid Dynamics</li>
+                                <li>Advanced FEA</li>
+                                <li>Multibody Dynamics</li>
+                                <li>Optimization Methods</li>
+                            </ul>
+                        </div>
+                        <div class="path-step">
+                            <h4>Step 3: Industry Applications</h4>
+                            <ul>
+                                <li>Product Development</li>
+                                <li>Project Management</li>
+                                <li>Systems Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courses-section">
+                <h3>Recommended Courses</h3>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <h4>Mechanics of Materials</h4>
+                        <p class="platform">Coursera - Georgia Tech</p>
+                        <p class="description">Comprehensive course on stress, strain, and deformation of materials</p>
+                        <div class="course-details">
+                            <span class="duration">8 weeks</span>
+                            <span class="level">Intermediate</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <h4>Thermodynamics</h4>
+                        <p class="platform">edX - MIT</p>
+                        <p class="description">Fundamental principles of thermodynamics and heat transfer</p>
+                        <div class="course-details">
+                            <span class="duration">12 weeks</span>
+                            <span class="level">Intermediate</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <h4>Fluid Mechanics</h4>
+                        <p class="platform">Coursera - University of Michigan</p>
+                        <p class="description">Fluid statics, dynamics, and applications in engineering</p>
+                        <div class="course-details">
+                            <span class="duration">10 weeks</span>
+                            <span class="level">Intermediate</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <h4>Machine Design</h4>
+                        <p class="platform">Udemy - Engineering Academy</p>
+                        <p class="description">Practical machine design with real-world examples</p>
+                        <div class="course-details">
+                            <span class="duration">6 weeks</span>
+                            <span class="level">Advanced</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <h4>CAD/CAM</h4>
+                        <p class="platform">LinkedIn Learning</p>
+                        <p class="description">Computer-aided design and manufacturing fundamentals</p>
+                        <div class="course-details">
+                            <span class="duration">8 weeks</span>
+                            <span class="level">Beginner</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <h4>Finite Element Analysis</h4>
+                        <p class="platform">Coursera - Cornell University</p>
+                        <p class="description">Introduction to FEA methods and applications</p>
+                        <div class="course-details">
+                            <span class="duration">10 weeks</span>
+                            <span class="level">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="books-section">
+                <h3>Essential Books</h3>
+                <div class="books-grid">
+                    <div class="book-card">
+                        <h4>Shigley's Mechanical Engineering Design</h4>
+                        <p class="author">Richard G. Budynas</p>
+                        <p class="description">The definitive reference for machine design</p>
+                    </div>
+
+                    <div class="book-card">
+                        <h4>Mechanics of Materials</h4>
+                        <p class="author">Beer & Johnston</p>
+                        <p class="description">Comprehensive treatment of stress and strain</p>
+                    </div>
+
+                    <div class="book-card">
+                        <h4>Fundamentals of Fluid Mechanics</h4>
+                        <p class="author">Munson, Young, Okiishi</p>
+                        <p class="description">Complete fluid mechanics textbook</p>
+                    </div>
+
+                    <div class="book-card">
+                        <h4>Thermodynamics: An Engineering Approach</h4>
+                        <p class="author">Cengel & Boles</p>
+                        <p class="description">Practical approach to thermodynamics</p>
+                    </div>
+
+                    <div class="book-card">
+                        <h4>Manufacturing Engineering & Technology</h4>
+                        <p class="author">Kalpakjian & Schmid</p>
+                        <p class="description">Comprehensive manufacturing processes guide</p>
+                    </div>
+
+                    <div class="book-card">
+                        <h4>Roark's Formulas for Stress and Strain</h4>
+                        <p class="author">Warren C. Young</p>
+                        <p class="description">Essential reference for stress analysis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standards Section -->
+    <section id="standards" class="section alt-bg">
+        <div class="container">
+            <h2>Industry Standards</h2>
+            <p class="section-description">Key engineering standards and best practices</p>
+
+            <div class="standards-organizations">
+                <div class="standards-org">
+                    <h3>ASME (American Society of Mechanical Engineers)</h3>
+                    <ul>
+                        <li>ASME Boiler and Pressure Vessel Code (BPVC)</li>
+                        <li>ASME B31.1 - Power Piping</li>
+                        <li>ASME B31.3 - Process Piping</li>
+                        <li>ASME Y14.5 - Dimensioning and Tolerancing</li>
+                        <li>ASME Section IX - Welding Qualifications</li>
+                    </ul>
+                </div>
+
+                <div class="standards-org">
+                    <h3>ASTM (American Society for Testing and Materials)</h3>
+                    <ul>
+                        <li>ASTM A36 - Structural Steel</li>
+                        <li>ASTM E8 - Tensile Testing</li>
+                        <li>ASTM E10 - Brinell Hardness</li>
+                        <li>ASTM G48 - Pitting Corrosion</li>
+                        <li>ASTM D638 - Tensile Properties of Plastics</li>
+                    </ul>
+                </div>
+
+                <div class="standards-org">
+                    <h3>ISO (International Organization for Standardization)</h3>
+                    <ul>
+                        <li>ISO 9001 - Quality Management</li>
+                        <li>ISO 14001 - Environmental Management</li>
+                        <li>ISO 45001 - Occupational Health & Safety</li>
+                        <li>ISO 286 - ISO System of Limits and Fits</li>
+                        <li>ISO 2768 - General Tolerances</li>
+                    </ul>
+                </div>
+
+                <div class="standards-org">
+                    <h3>Other Important Standards</h3>
+                    <ul>
+                        <li>API (American Petroleum Institute) Standards</li>
+                        <li>NEMA (National Electrical Manufacturers Association)</li>
+                        <li>AGMA (American Gear Manufacturers Association)</li>
+                        <li>SAE (Society of Automotive Engineers)</li>
+                        <li>AWS (American Welding Society)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="standards-applications">
+                <h3>Standards Applications</h3>
+                <div class="application-grid">
+                    <div class="application-card">
+                        <h4>Pressure Vessels</h4>
+                        <p>ASME BPVC Section VIII</p>
+                        <ul>
+                            <li>Design requirements</li>
+                            <li>Material specifications</li>
+                            <li>Fabrication rules</li>
+                            <li>Inspection and testing</li>
+                        </ul>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Piping Systems</h4>
+                        <p>ASME B31 Series</p>
+                        <ul>
+                            <li>Power piping (B31.1)</li>
+                            <li>Process piping (B31.3)</li>
+                            <li>Gas transmission (B31.4)</li>
+                            <li>Building services (B31.9)</li>
+                        </ul>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Welding</h4>
+                        <p>ASME Section IX / AWS D1.1</p>
+                        <ul>
+                            <li>Procedure qualifications</li>
+                            <li>Performance qualifications</li>
+                            <li>Welder certification</li>
+                            <li>Inspection requirements</li>
+                        </ul>
+                    </div>
+
+                    <div class="application-card">
+                        <h4>Quality Systems</h4>
+                        <p>ISO 9001</p>
+                        <ul>
+                            <li>Quality management principles</li>
+                            <li>Process approach</li>
+                            <li>Continuous improvement</li>
+                            <li>Risk-based thinking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Modal -->
+    <div id="calculatorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="calculatorTitle">Calculator</h3>
+                <button class="modal-close" onclick="closeCalculator()">&times;</button>
+            </div>
+            <div class="modal-body" id="calculatorBody">
+                <!-- Calculator content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mechanical Engineering Hub</h3>
+                    <p>Your comprehensive resource for mechanical engineering knowledge, tools, and best practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#calculators">Calculators</a></li>
+                        <li><a href="#formulas">Formulas</a></li>
+                        <li><a href="#materials">Materials</a></li>
+                        <li><a href="#learning">Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#manufacturing">Manufacturing</a></li>
+                        <li><a href="#maintenance">Maintenance</a></li>
+                        <li><a href="#standards">Standards</a></li>
+                        <li><a href="#unit-converter">Unit Converter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p>This resource is for educational purposes. Always verify calculations and consult with qualified professionals for critical applications.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mechanical Engineering Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calculators.js"></script>
+    <script src="js/materials.js"></script>
+    <script src="js/unit-converter.js"></script>
+</body>
+</html>
