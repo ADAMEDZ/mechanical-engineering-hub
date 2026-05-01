@@ -7,6 +7,7 @@
     <meta name="description" content="Comprehensive mechanical engineering resource with calculators, formulas, learning materials, and industry best practices.">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/calculators.css">
+    <link rel="stylesheet" href="css/diagrams.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -28,10 +29,14 @@
                 <li><a href="#calculators" class="nav-link">Calculators</a></li>
                 <li><a href="#formulas" class="nav-link">Formulas</a></li>
                 <li><a href="#materials" class="nav-link">Materials</a></li>
+                <li><a href="#advanced-materials" class="nav-link">Advanced Materials</a></li>
+                <li><a href="#diagrams" class="nav-link">Interactive Diagrams</a></li>
                 <li><a href="#manufacturing" class="nav-link">Manufacturing</a></li>
                 <li><a href="#maintenance" class="nav-link">Maintenance</a></li>
                 <li><a href="#learning" class="nav-link">Learning</a></li>
                 <li><a href="#standards" class="nav-link">Standards</a></li>
+                <li><a href="#engineering-tools" class="nav-link">Tools</a></li>
+                <li><a href="#reference-tables" class="nav-link">Reference</a></li>
             </ul>
         </div>
     </nav>
@@ -1095,6 +1100,528 @@
         </div>
     </section>
 
+    <!-- Interactive Diagrams Section -->
+    <section id="diagrams" class="section">
+        <div class="container">
+            <h2>Interactive Engineering Diagrams</h2>
+            <p class="section-description">Explore mechanical engineering concepts through interactive visualizations</p>
+
+            <div class="diagram-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-tab="stress-strain">Stress-Strain Curves</button>
+                    <button class="tab-btn" data-tab="thermodynamic">Thermodynamic Diagrams</button>
+                    <button class="tab-btn" data-tab="fatigue">Fatigue Analysis</button>
+                    <button class="tab-btn" data-tab="creep">Creep Behavior</button>
+                    <button class="tab-btn" data-tab="heat-transfer">Heat Transfer</button>
+                    <button class="tab-btn" data-tab="fluid-flow">Fluid Flow</button>
+                </div>
+
+                <!-- Stress-Strain Diagrams -->
+                <div class="diagram-content active" id="stress-strain">
+                    <h3>Stress-Strain Curves</h3>
+                    <div class="diagram-controls">
+                        <div class="control-group">
+                            <label for="stressMaterial">Material:</label>
+                            <select id="stressMaterial">
+                                <option value="steel">Steel</option>
+                                <option value="aluminum">Aluminum</option>
+                                <option value="titanium">Titanium</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateStressStrainDiagram()">Generate Curve</button>
+                    </div>
+                    <div class="diagram-container">
+                        <canvas id="stressStrainCanvas" width="800" height="500"></canvas>
+                    </div>
+                    <div class="diagram-info">
+                        <h4>Key Points:</h4>
+                        <ul>
+                            <li><strong>Yield Point:</strong> Where material begins to deform plastically</li>
+                            <li><strong>Ultimate Strength:</strong> Maximum stress material can withstand</li>
+                            <li><strong>Fracture Point:</strong> Where material breaks</li>
+                            <li><strong>Young's Modulus:</strong> Slope of elastic region (stiffness)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Thermodynamic Diagrams -->
+                <div class="diagram-content" id="thermodynamic">
+                    <h3>Thermodynamic Diagrams</h3>
+                    <div class="diagram-controls">
+                        <div class="control-group">
+                            <label for="thermoDiagram">Diagram Type:</label>
+                            <select id="thermoDiagram">
+                                <option value="ts">T-s Diagram</option>
+                                <option value="ph">P-h Diagram</option>
+                                <option value="pv">P-V Diagram</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateThermoDiagram()">Generate Diagram</button>
+                    </div>
+                    <div class="diagram-container">
+                        <canvas id="thermoCanvas" width="800" height="500"></canvas>
+                    </div>
+                    <div class="diagram-info">
+                        <h4>Thermodynamic Processes:</h4>
+                        <ul>
+                            <li><strong>Isobaric:</strong> Constant pressure process</li>
+                            <li><strong>Isothermal:</strong> Constant temperature process</li>
+                            <li><strong>Isentropic:</strong> Constant entropy process</li>
+                            <li><strong>Isochoric:</strong> Constant volume process</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fatigue Analysis -->
+                <div class="diagram-content" id="fatigue">
+                    <h3>S-N Fatigue Curves</h3>
+                    <div class="diagram-controls">
+                        <div class="control-group">
+                            <label for="fatigueMaterial">Material:</label>
+                            <select id="fatigueMaterial">
+                                <option value="steel">Steel</option>
+                                <option value="aluminum">Aluminum</option>
+                                <option value="titanium">Titanium</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateFatigueDiagram()">Generate S-N Curve</button>
+                    </div>
+                    <div class="diagram-container">
+                        <canvas id="fatigueCanvas" width="800" height="500"></canvas>
+                    </div>
+                    <div class="diagram-info">
+                        <h4>Fatigue Concepts:</h4>
+                        <ul>
+                            <li><strong>Endurance Limit:</strong> Stress below which material won't fail (steel only)</li>
+                            <li><strong>S-N Curve:</strong> Stress vs. Number of cycles to failure</li>
+                            <li><strong>High Cycle Fatigue:</strong> >10^4 cycles, elastic deformation</li>
+                            <li><strong>Low Cycle Fatigue:</strong> <10^4 cycles, plastic deformation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Creep Behavior -->
+                <div class="diagram-content" id="creep">
+                    <h3>Creep Curves</h3>
+                    <div class="diagram-controls">
+                        <div class="control-group">
+                            <label for="creepMaterial">Material:</label>
+                            <select id="creepMaterial">
+                                <option value="steel">Steel</option>
+                                <option value="aluminum">Aluminum</option>
+                                <option value="titanium">Titanium</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="creepTemperature">Temperature (°C):</label>
+                            <input type="number" id="creepTemperature" value="500" min="0">
+                        </div>
+                        <div class="control-group">
+                            <label for="creepStress">Stress (MPa):</label>
+                            <input type="number" id="creepStress" value="100" min="0">
+                        </div>
+                        <button class="btn btn-primary" onclick="generateCreepDiagram()">Generate Creep Curve</button>
+                    </div>
+                    <div class="diagram-container">
+                        <canvas id="creepCanvas" width="800" height="500"></canvas>
+                    </div>
+                    <div class="diagram-info">
+                        <h4>Creep Stages:</h4>
+                        <ul>
+                            <li><strong>Primary Creep:</strong> Decreasing strain rate, work hardening</li>
+                            <li><strong>Secondary Creep:</strong> Constant strain rate, steady state</li>
+                            <li><strong>Tertiary Creep:</strong> Increasing strain rate, necking and failure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Heat Transfer -->
+                <div class="diagram-content" id="heat-transfer">
+                    <h3>Heat Transfer Visualization</h3>
+                    <div class="diagram-controls">
+                        <div class="control-group">
+                            <label for="heatTransferType">Transfer Type:</label>
+                            <select id="heatTransferType">
+                                <option value="conduction">Conduction</option>
+                                <option value="convection">Convection</option>
+                                <option value="radiation">Radiation</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateHeatTransferDiagram()">Generate Visualization</button>
+                    </div>
+                    <div class="diagram-container">
+                        <canvas id="heatTransferCanvas" width="800" height="500"></canvas>
+                    </div>
+                    <div class="diagram-info">
+                        <h4>Heat Transfer Mechanisms:</h4>
+                        <ul>
+                            <li><strong>Conduction:</strong> Heat transfer through direct contact</li>
+                            <li><strong>Convection:</strong> Heat transfer through fluid motion</li>
+                            <li><strong>Radiation:</strong> Heat transfer through electromagnetic waves</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fluid Flow -->
+                <div class="diagram-content" id="fluid-flow">
+                    <h3>Fluid Flow Profiles</h3>
+                    <div class="diagram-controls">
+                        <div class="control-group">
+                            <label for="flowType">Flow Type:</label>
+                            <select id="flowType">
+                                <option value="laminar">Laminar Flow</option>
+                                <option value="turbulent">Turbulent Flow</option>
+                                <option value="transition">Transitional Flow</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateFlowProfile()">Generate Profile</button>
+                    </div>
+                    <div class="diagram-container">
+                        <canvas id="flowCanvas" width="800" height="500"></canvas>
+                    </div>
+                    <div class="diagram-info">
+                        <h4>Flow Regimes:</h4>
+                        <ul>
+                            <li><strong>Laminar (Re < 2300):</strong> Smooth, layered flow</li>
+                            <li><strong>Transitional (2300 < Re < 4000):</strong> Unstable, mixed behavior</li>
+                            <li><strong>Turbulent (Re > 4000):</strong> Chaotic, mixing flow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Materials Section -->
+    <section id="advanced-materials" class="section alt-bg">
+        <div class="container">
+            <h2>Advanced Materials Database</h2>
+            <p class="section-description">Comprehensive database with 50+ materials and advanced search capabilities</p>
+
+            <div class="advanced-search">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select id="materialCategory" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="steel">Steel</option>
+                            <option value="aluminum">Aluminum</option>
+                            <option value="titanium">Titanium</option>
+                            <option value="copper">Copper Alloys</option>
+                            <option value="plastics">Plastics</option>
+                            <option value="composites">Composites</option>
+                            <option value="superalloys">Superalloys</option>
+                            <option value="ceramics">Ceramics</option>
+                            <option value="magnesium">Magnesium</option>
+                            <option value="zinc">Zinc</option>
+                            <option value="special_alloys">Special Alloys</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Min Density (kg/m³):</label>
+                        <input type="number" id="minDensity" class="filter-input" placeholder="Min">
+                    </div>
+                    <div class="filter-group">
+                        <label>Max Density (kg/m³):</label>
+                        <input type="number" id="maxDensity" class="filter-input" placeholder="Max">
+                    </div>
+                    <div class="filter-group">
+                        <label>Min Yield Strength (MPa):</label>
+                        <input type="number" id="minYieldStrength" class="filter-input" placeholder="Min">
+                    </div>
+                    <div class="filter-group">
+                        <label>Max Yield Strength (MPa):</label>
+                        <input type="number" id="maxYieldStrength" class="filter-input" placeholder="Max">
+                    </div>
+                    <div class="filter-group">
+                        <label>Corrosion Resistance:</label>
+                        <select id="corrosionResistance" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="fair">Fair</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Weldability:</label>
+                        <select id="weldability" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="fair">Fair</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Max Cost:</label>
+                        <select id="maxCost" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="very_high">Very High</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search-actions">
+                    <input type="text" id="materialSearchTerm" class="search-input" placeholder="Search materials...">
+                    <button class="btn btn-primary" onclick="searchMaterials()">Search</button>
+                    <button class="btn btn-secondary" onclick="resetMaterialSearch()">Reset</button>
+                </div>
+            </div>
+
+            <div class="materials-results">
+                <div class="results-header">
+                    <h3>Results: <span id="resultsCount">0</span> materials found</h3>
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="table">Table</button>
+                        <button class="view-btn" data-view="cards">Cards</button>
+                        <button class="view-btn" data-view="compare">Compare</button>
+                    </div>
+                </div>
+                <div class="results-container" id="materialsResults">
+                    <!-- Results will be populated here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Tools Section -->
+    <section id="engineering-tools" class="section">
+        <div class="container">
+            <h2>Engineering Tools & Utilities</h2>
+            <p class="section-description">Comprehensive tools for engineering calculations and analysis</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>📊 Material Selector</h3>
+                    <p>Smart material selection based on requirements</p>
+                    <ul>
+                        <li>Multi-criteria analysis</li>
+                        <li>Cost optimization</li>
+                        <li>Performance ratings</li>
+                        <li>Application matching</li>
+                    </ul>
+                    <button class="btn btn-calc" onclick="openMaterialSelector()">Open Tool</button>
+                </div>
+
+                <div class="tool-card">
+                    <h3>🔗 Fastener Calculator</h3>
+                    <p>Complete fastener design and selection</p>
+                    <ul>
+                        <li>Bolt sizing and strength</li>
+                        <li>Torque calculations</li>
+                        <li>Preload analysis</li>
+                        <li>Joint stiffness</li>
+                    </ul>
+                    <button class="btn btn-calc" onclick="openFastenerCalculator()">Open Tool</button>
+                </div>
+
+                <div class="tool-card">
+                    <h3>⚡ Power Transmission</h3>
+                    <p>Gears, belts, chains, and shafts</p>
+                    <ul>
+                        <li>Gear ratio calculations</li>
+                        <li>Belt length and tension</li>
+                        <li>Chain sprocket design</li>
+                        <li>Power and torque</li>
+                    </ul>
+                    <button class="btn btn-calc" onclick="openPowerTransmission()">Open Tool</button>
+                </div>
+
+                <div class="tool-card">
+                    <h3>🌡️ Thermal Analysis</h3>
+                    <p>Heat transfer and thermal stress</p>
+                    <ul>
+                        <li>Steady-state analysis</li>
+                        <li>Transient analysis</li>
+                        <li>Thermal stress calculations</li>
+                        <li>Insulation design</li>
+                    </ul>
+                    <button class="btn btn-calc" onclick="openThermalAnalysis()">Open Tool</button>
+                </div>
+
+                <div class="tool-card">
+                    <h3>📐 Tolerance Analysis</h3>
+                    <p>Geometric dimensioning and tolerancing</p>
+                    <ul>
+                        <li>Stack-up analysis</li>
+                        <li>Fit calculations</li>
+                        <li>GD&T symbols</li>
+                        <li>Statistical tolerancing</li>
+                    </ul>
+                    <button class="btn btn-calc" onclick="openToleranceAnalysis()">Open Tool</button>
+                </div>
+
+                <div class="tool-card">
+                    <h3>🔧 Failure Analysis</h3>
+                    <p>Root cause analysis and prevention</p>
+                    <ul>
+                        <li>Fracture mechanics</li>
+                        <li>Fatigue analysis</li>
+                        <li>Wear prediction</li>
+                        <li>Failure modes</li>
+                    </ul>
+                    <button class="btn btn-calc" onclick="openFailureAnalysis()">Open Tool</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reference Tables Section -->
+    <section id="reference-tables" class="section alt-bg">
+        <div class="container">
+            <h2>Engineering Reference Tables</h2>
+            <p class="section-description">Quick reference data for common engineering calculations</p>
+
+            <div class="reference-tabs">
+                <button class="ref-tab active" data-tab="constants">Physical Constants</button>
+                <button class="ref-tab" data-tab="conversions">Common Conversions</button>
+                <button class="ref-tab" data-tab="standards">Material Standards</button>
+                <button class="ref-tab" data-tab="formulas">Quick Formulas</button>
+                <button class="ref-tab" data-tab="symbols">Engineering Symbols</button>
+            </div>
+
+            <div class="reference-content">
+                <!-- Physical Constants -->
+                <div class="ref-content active" id="constants">
+                    <h3>Fundamental Physical Constants</h3>
+                    <table class="reference-table">
+                        <thead>
+                            <tr>
+                                <th>Constant</th>
+                                <th>Symbol</th>
+                                <th>Value</th>
+                                <th>Units</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Speed of Light</td><td>c</td><td>2.998 × 10⁸</td><td>m/s</td></tr>
+                            <tr><td>Gravitational Constant</td><td>G</td><td>6.674 × 10⁻¹¹</td><td>N·m²/kg²</td></tr>
+                            <tr><td>Avogadro's Number</td><td>N_A</td><td>6.022 × 10²³</td><td>mol⁻¹</td></tr>
+                            <tr><td>Boltzmann Constant</td><td>k</td><td>1.381 × 10⁻²³</td><td>J/K</td></tr>
+                            <tr><td>Planck Constant</td><td>h</td><td>6.626 × 10⁻³⁴</td><td>J·s</td></tr>
+                            <tr><td>Gas Constant</td><td>R</td><td>8.314</td><td>J/(mol·K)</td></tr>
+                            <tr><td>Stefan-Boltzmann Constant</td><td>σ</td><td>5.670 × 10⁻⁸</td><td>W/(m²·K⁴)</td></tr>
+                            <tr><td>Permittivity of Free Space</td><td>ε₀</td><td>8.854 × 10⁻¹²</td><td>F/m</td></tr>
+                            <tr><td>Permeability of Free Space</td><td>μ₀</td><td>4π × 10⁻⁷</td><td>N/A²</td></tr>
+                            <tr><td>Elementary Charge</td><td>e</td><td>1.602 × 10⁻¹⁹</td><td>C</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Common Conversions -->
+                <div class="ref-content" id="conversions">
+                    <h3>Common Engineering Conversions</h3>
+                    <table class="reference-table">
+                        <thead>
+                            <tr>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Multiply By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>inches</td><td>mm</td><td>25.4</td></tr>
+                            <tr><td>feet</td><td>meters</td><td>0.3048</td></tr>
+                            <tr><td>psi</td><td>kPa</td><td>6.89476</td></tr>
+                            <tr><td>MPa</td><td>psi</td><td>145.038</td></tr>
+                            <tr><td>lbf</td><td>N</td><td>4.44822</td></tr>
+                            <tr><td>N</td><td>lbf</td><td>0.224809</td></tr>
+                            <tr><td>BTU</td><td>J</td><td>1055.06</td></tr>
+                            <tr><td>J</td><td>BTU</td><td>0.000947817</td></tr>
+                            <tr><td>hp</td><td>kW</td><td>0.7457</td></tr>
+                            <tr><td>kW</td><td>hp</td><td>1.34102</td></tr>
+                            <tr><td>°F</td><td>°C</td><td>(°F - 32) × 5/9</td></tr>
+                            <tr><td>°C</td><td>°F</td><td>(°C × 9/5) + 32</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Material Standards -->
+                <div class="ref-content" id="standards">
+                    <h3>Common Material Standards</h3>
+                    <table class="reference-table">
+                        <thead>
+                            <tr>
+                                <th>Standard</th>
+                                <th>Organization</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>ASTM A36</td><td>ASTM</td><td>Structural Steel</td></tr>
+                            <tr><td>ASTM A992</td><td>ASTM</td><td>Steel for Structural Shapes</td></tr>
+                            <tr><td>ASTM B209</td><td>ASTM</td><td>Aluminum Sheet & Plate</td></tr>
+                            <tr><td>ASTM B221</td><td>ASTM</td><td>Aluminum Extrusions</td></tr>
+                            <tr><td>ASTM B265</td><td>ASTM</td><td>Titanium Sheet & Plate</td></tr>
+                            <tr><td>ASTM B16</td><td>ASTM</td><td>Free Cutting Brass</td></tr>
+                            <tr><td>SAE 1018</td><td>SAE</td><td>Low Carbon Steel</td></tr>
+                            <tr><td>SAE 4140</td><td>SAE</td><td>Chromium-Molybdenum Steel</td></tr>
+                            <tr><td>SAE 4340</td><td>SAE</td><td>Nickel-Chromium-Molybdenum Steel</td></tr>
+                            <tr><td>AMS 5524</td><td>SAE</td><td>Stainless Steel 316</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Quick Formulas -->
+                <div class="ref-content" id="formulas">
+                    <h3>Quick Reference Formulas</h3>
+                    <table class="reference-table">
+                        <thead>
+                            <tr>
+                                <th>Formula</th>
+                                <th>Application</th>
+                                <th>Variables</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>σ = F/A</td><td>Stress</td><td>σ=stress, F=force, A=area</td></tr>
+                            <tr><td>ε = ΔL/L₀</td><td>Strain</td><td>ε=strain, ΔL=deformation, L₀=original length</td></tr>
+                            <tr><td>τ = F/A</td><td>Shear Stress</td><td>τ=shear stress, F=shear force, A=area</td></tr>
+                            <tr><td>E = σ/ε</td><td>Young's Modulus</td><td>E=modulus, σ=stress, ε=strain</td></tr>
+                            <tr><td>G = τ/γ</td><td>Shear Modulus</td><td>G=shear modulus, τ=shear stress, γ=shear strain</td></tr>
+                            <tr><td>I = bh³/12</td><td>Moment of Inertia (rect)</td><td>I=inertia, b=width, h=height</td></tr>
+                            <tr><td>δ = FL³/3EI</td><td>Beam Deflection (cantilever)</td><td>δ=deflection, F=load, L=length, E=modulus, I=inertia</td></tr>
+                            <tr><td>τ = Tr/J</td><td>Torsional Stress</td><td>τ=shear stress, T=torque, r=radius, J=polar inertia</td></tr>
+                            <tr><td>Re = ρvD/μ</td><td>Reynolds Number</td><td>Re=Reynolds, ρ=density, v=velocity, D=diameter, μ=viscosity</td></tr>
+                            <tr><td>Q = kAΔT/L</td><td>Heat Conduction</td><td>Q=heat rate, k=conductivity, A=area, ΔT=temp diff, L=thickness</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Engineering Symbols -->
+                <div class="ref-content" id="symbols">
+                    <h3>Common Engineering Symbols</h3>
+                    <table class="reference-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Typical Use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>σ</td><td>Sigma</td><td>Normal stress</td></tr>
+                            <tr><td>τ</td><td>Tau</td><td>Shear stress</td></tr>
+                            <tr><td>ε</td><td>Epsilon</td><td>Normal strain</td></tr>
+                            <tr><td>γ</td><td>Gamma</td><td>Shear strain</td></tr>
+                            <tr><td>E</td><td>E</td><td>Young's modulus</td></tr>
+                            <tr><td>G</td><td>G</td><td>Shear modulus</td></tr>
+                            <tr><td>ν</td><td>Nu</td><td>Poisson's ratio</td></tr>
+                            <tr><td>ρ</td><td>Rho</td><td>Density</td></tr>
+                            <tr><td>μ</td><td>Mu</td><td>Viscosity</td></tr>
+                            <tr><td>ω</td><td>Omega</td><td>Angular velocity</td></tr>
+                            <tr><td>θ</td><td>Theta</td><td>Angle</td></tr>
+                            <tr><td>φ</td><td>Phi</td><td>Angle, phase</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Calculator Modal -->
     <div id="calculatorModal" class="modal">
         <div class="modal-content">
@@ -1148,6 +1675,9 @@
     <script src="js/main.js"></script>
     <script src="js/calculators.js"></script>
     <script src="js/materials.js"></script>
+    <script src="js/extended-materials.js"></script>
     <script src="js/unit-converter.js"></script>
+    <script src="js/visualizations.js"></script>
+    <script src="js/diagrams.js"></script>
 </body>
 </html>
